@@ -328,6 +328,13 @@ section {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+    display: inline-block;
+}
+
+/* Fallback styles for when Font Awesome fails to load */
+.achievement-item i:not(.fa-trophy):not(.fa-certificate):not(.fa-book):not(.fa-award) {
+    font-style: normal;
+    font-size: 2rem;
 }
 
 .achievement-item h3 {
