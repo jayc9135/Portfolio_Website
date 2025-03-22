@@ -5,6 +5,57 @@ AOS.init({
     offset: 100
 });
 
+// Initialize Splide for Projects
+document.addEventListener('DOMContentLoaded', function() {
+    // Projects Slider
+    new Splide('.projects-splide', {
+        type: 'slide',
+        perPage: 1,
+        perMove: 1,
+        gap: '2rem',
+        padding: { left: '5%', right: '5%' },
+        arrows: true,
+        pagination: true,
+        autoplay: false,
+        interval: 4000,
+        speed: 800,
+        rewind: true,
+        rewindSpeed: 1000,
+        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+        focus: 'center',
+        breakpoints: {
+            768: {
+                padding: { left: '1rem', right: '1rem' }
+            }
+        }
+    }).mount();
+
+    // Skills Slider
+    new Splide('.skills-splide', {
+        type: 'slide',
+        perPage: 3,
+        perMove: 1,
+        gap: '2rem',
+        padding: { left: '5%', right: '5%' },
+        arrows: true,
+        pagination: true,
+        autoplay: false,
+        speed: 800,
+        rewind: true,
+        rewindSpeed: 1000,
+        easing: 'cubic-bezier(0.25, 1, 0.5, 1)',
+        breakpoints: {
+            1200: {
+                perPage: 2
+            },
+            768: {
+                perPage: 1,
+                padding: { left: '1rem', right: '1rem' }
+            }
+        }
+    }).mount();
+});
+
 // Navigation elements
 const navElements = {
     sections: document.querySelectorAll('section'),
