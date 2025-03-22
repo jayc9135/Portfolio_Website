@@ -453,18 +453,31 @@
                     <p>Rochester, NY</p>
                 </div>
             </div>
-            <form class="contact-form" data-aos="fade-up">
+            <form class="contact-form" action="https://formsubmit.co/jc4320@rit.edu" method="POST" target="_blank" data-aos="fade-up">
+                <!-- Honeypot to prevent spam -->
+                <input type="text" name="_honey" style="display: none;">
+                <!-- Disable captcha -->
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Success page -->
+                <input type="hidden" name="_next" value="https://jayc9135.github.io/thanks.html">
+                
                 <div class="form-group">
-                    <input type="text" id="name" required>
-                    <label for="name">Your Name</label>
+                    <label for="name">
+                        Your Name:
+                        <input type="text" id="name" name="name" required>
+                    </label>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" required>
-                    <label for="email">Your Email</label>
+                    <label for="email">
+                        Your Email:
+                        <input type="email" id="email" name="email" required>
+                    </label>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" required></textarea>
-                    <label for="message">Your Message</label>
+                    <label for="message">
+                        Your Message:
+                        <textarea id="message" name="message" required></textarea>
+                    </label>
                 </div>
                 <button type="submit" class="btn primary-btn">Send Message</button>
             </form>

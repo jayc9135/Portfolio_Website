@@ -100,47 +100,18 @@ window.addEventListener('resize', () => {
 });
 
 // Form handling
-const contactForm = document.querySelector('.contact-form');
-
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const submitBtn = contactForm.querySelector('button');
-    const originalText = submitBtn.innerHTML;
-    
-    // Show loading state
+const form = document.querySelector('.contact-form');
+form.addEventListener('submit', function(e) {
+    const submitBtn = form.querySelector('button');
+    const originalBtnText = submitBtn.innerHTML;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
-    
-    // Simulate form submission (replace with actual form handling)
-    try {
-        await new Promise(resolve => setTimeout(resolve, 2000));
-        
-        // Show success message
-        submitBtn.innerHTML = '<i class="fas fa-check"></i> Sent!';
-        submitBtn.style.backgroundColor = '#10B981';
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Reset button after 3 seconds
-        setTimeout(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            submitBtn.style.backgroundColor = '';
-        }, 3000);
-        
-    } catch (error) {
-        // Show error message
-        submitBtn.innerHTML = '<i class="fas fa-times"></i> Error';
-        submitBtn.style.backgroundColor = '#EF4444';
-        
-        setTimeout(() => {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            submitBtn.style.backgroundColor = '';
-        }, 3000);
-    }
+
+    // Reset button after submission
+    setTimeout(() => {
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+    }, 2000);
 });
 
 // Smooth scroll for anchor links
