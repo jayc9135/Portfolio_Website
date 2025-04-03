@@ -489,6 +489,35 @@ section {
     margin-top: auto;
 }
 
+.project-links .btn {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.project-links .btn:hover {
+    background-color: var(--primary-color);
+    color: var(--card-bg-color);
+    transform: translateY(-2px);
+}
+
+.project-links .btn i {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.project-links .btn:hover i {
+    color: var(--card-bg-color);
+}
+
 /* Splide Navigation Styles */
 .splide__arrow {
     background: rgba(255, 255, 255, 0.1);
