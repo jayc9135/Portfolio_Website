@@ -251,6 +251,18 @@ section {
     margin-right: auto;
 }
 
+.gpa-highlight {
+    background-color: rgba(41, 151, 255, 0.1);
+    color: var(--primary-color) !important;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(41, 151, 255, 0.2);
+}
+
 /* Skills */
 .skills {
     background-color: var(--section-bg-color);
@@ -775,4 +787,86 @@ footer {
 [data-aos="fade-up"].aos-animate {
     opacity: 1;
     transform: translateY(0);
+}
+
+.certificate-info {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.certificate-info p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.certificate-info i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.timeline-content h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.certificate-title {
+    color: var(--primary-color) !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.certificate-title i {
+    font-size: 1rem;
+}
+
+.contact-info.centered {
+    margin-bottom: 2.5rem;
+}
+
+.contact-info.centered .contact-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--card-bg-color);
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.contact-info.centered .contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info.centered i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.contact-info.centered p {
+    margin: 0;
+}
+
+.contact-info.centered a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.contact-info.centered a:hover {
+    color: var(--primary-color);
 } 
